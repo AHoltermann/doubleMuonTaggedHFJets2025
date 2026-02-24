@@ -28,10 +28,15 @@ cd ../
 
 ./Execute --Input root://eoscms.cern.ch//eos/cms/store/group/phys_heavyions/aholterm/g2qqbar/HighEGJet/crab_btagged_and_svtagged_jets_DATA_HFfindersA/251202_223354/0000/HiForestMiniAOD_1.root \
             --Output skim_HiForestMINIAOD_local-test.root \
+            --IsDebug false \
             --IsData true \
             --IsPP true \
+            --UseTrackVtxInfo false \
             --svtx true \
             --useHybrid false \
+            --MuTrackMatchDRCut 0.001 \
+            --GenRecoMuonMatchDRCut 0.03 \
+            --applyConstituentMatching false \
             --PFJetCollection ak3PFJetAnalyzer/t \
             --MinJetPT 0 \
             --Fraction 1.0
